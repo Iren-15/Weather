@@ -10,3 +10,4 @@ Also in this application you can view the forecast for 3 - 5 days.
 - react
 - javascript
 - html/css
+- scss
