@@ -1,5 +1,5 @@
 # A-Level School React course 2023
-Course curator: [Taras Samoilenko](https://github.com/cos171)
+Course curator: [Taras Samoilenko](https://github.com/cos1715)
 
  [About React course](https://a-level.com.ua/courses/front-end-online/)
 # Weather app
