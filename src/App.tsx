@@ -1,9 +1,7 @@
 import {
   BrowserRouter,
   Switch,
-  Route,
-  Redirect,
-  RouteProps,
+  Route
 } from "react-router-dom";
 import "./App.css";
 import { Home } from "./pages/home";
