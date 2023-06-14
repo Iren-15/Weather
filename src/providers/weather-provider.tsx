@@ -1,8 +1,8 @@
 import { ReactNode, createContext, useState } from "react";
 
 interface IWeatherContext {
-  weatherObj: {};
-  setWeatherObj: (weatherObj: {}) => void;
+  weatherObj: any;
+  setWeatherObj: (weatherObj: any) => void;
 }
 
 export const WeatherContext = createContext<IWeatherContext>({
