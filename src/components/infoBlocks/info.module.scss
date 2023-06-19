@@ -2,19 +2,38 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 20px;
+  width: 250px;
 }
 
-.li-container {
+.today {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.hourly-container {
   padding-left: 40px;
   padding-right: 40px;
   margin-bottom: 40px;
   list-style: none;
+  width: 185px;
 }
 
-.container {
+.flex-col {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.container {
   text-align: center;
 }
 
@@ -22,17 +41,23 @@
   color: rgb(73, 73, 73);
   font-size: 40px;
   font-weight: bold;
-  margin-bottom: 0px;
-  margin-top: 20px;
-  margin-left: 50px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 15px;
 }
 
 .par-date {
   color: rgb(73, 73, 73);
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px; 
+}
+
+.par-time {
+  color: rgb(73, 73, 73);
   font-size: 20px;
   font-weight: bold;
   margin: 10px;
-  
 }
 
 .par-temp {
@@ -41,6 +66,7 @@
   font-weight: bold;
   text-shadow: 5px 2px rgb(177, 210, 227);
   margin: 10px;
+  
 }
 
 .par-feels, .par-conditions, .par-variation {
@@ -56,16 +82,23 @@
 }
 
 @media all and (max-width: 820px) {
-  .li-container {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-top: 50px;
+  .hourly-container {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 0px;
   }
+  .ul-container {
+    width: 100%;
+  }
+  .d-flex {
+    flex-direction: column;
+  } 
 } 
 
 @media all and (max-width: 500px) {
-  .li-container {
-    margin-top: 10px;
+  .ul-container {
+    border: 1px solid black;
+    border-radius: 40px;
   }
 }
   

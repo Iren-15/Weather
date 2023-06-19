@@ -1,8 +1,8 @@
 import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { WeatherContext } from "../providers/weather-provider";
+import { InfoWeatherBlockHomePage } from "../components/infoBlocks/infoWeatherBlockHomePage";
 import { api } from "../consts/consts";
-import { InfoBlock } from "../components/infoBlock";
 import styles from "./styles.module.scss";
 
 export const Home = () => {
@@ -11,10 +11,9 @@ export const Home = () => {
   useEffect(() => {
     const getWeatherInKyiv = async () => {
       const res = await fetch(
-        `${api.endpoint}forecast?q=Kyiv&cnt=1&units=metric&appid=${api.key}`
+        `${api.endpoint}weather?q=Kyiv&units=metric&appid=${api.key}`
       );
       const resReceived = await res.json();
-      console.log(resReceived);
       setWeatherObj(resReceived);
     };
     getWeatherInKyiv();
@@ -26,12 +25,18 @@ export const Home = () => {
         <h1 className={styles["home-header"]}>
           Welcome to the weather forecast app!
         </h1>
-        <Link to="/weather" className={styles["link-other-city"]}>
-          See the weather in other cities
+        <Link
+          to="/weather"
+          className={styles["link-other-city"]}
+          onClick={() => {
+            setWeatherObj({});
+          }}
+        >
+          Find out more about the weather in other cities
         </Link>
       </div>
       <div className={styles["home-container"]}>
-        {weatherObj.cod == 200 && <InfoBlock />}
+        {weatherObj.cod == 200 && <InfoWeatherBlockHomePage />}
       </div>
     </div>
   );

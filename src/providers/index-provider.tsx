@@ -1,25 +1,25 @@
 import { ReactNode, createContext, useState } from "react";
 
-interface IIndexArrayContext {
-  indexArray: number[];
-  setIndexArray: (indexArray: any) => void;
+interface IIndexArrContext {
+  indexArrCurrentDay: any[];
+  setIndexArr: (indexArrCurrentDay: []) => void;
 }
 
-export const IndexArrayContext = createContext<IIndexArrayContext>({
-  indexArray: [],
-  setIndexArray: () => {},
+export const IndexArrContext = createContext<IIndexArrContext>({
+  indexArrCurrentDay: [],
+  setIndexArr: () => {},
 });
 
-interface IIndexArrayProvider {
+interface IIndexArrProvider {
   children: ReactNode;
 }
 
-export const IndexArrayProvider = ({ children }: IIndexArrayProvider) => {
-  const [indexArray, setIndexArray] = useState([]);
+export const IndexArrProvider = ({ children }: IIndexArrProvider) => {
+  const [indexArrCurrentDay, setIndexArr] = useState([]);
 
   return (
-    <IndexArrayContext.Provider value={{ indexArray, setIndexArray }}>
+    <IndexArrContext.Provider value={{ indexArrCurrentDay, setIndexArr }}>
       {children}
-    </IndexArrayContext.Provider>
+    </IndexArrContext.Provider>
   );
 };

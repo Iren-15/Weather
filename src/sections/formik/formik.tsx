@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import { CityContext } from "../../providers/city-provider";
 import { Tabs } from "../tabs";
 import { Input } from "../../components/input/input";
+import { WeatherContext } from "../../providers/weather-provider";
 import styles from "./styles.module.scss";
 
 interface IFormValues {
@@ -22,9 +23,9 @@ const validationSchema = Yup.object({
 export const FormikForm = () => {
   const history = useHistory();
   const { setCity } = useContext(CityContext);
+  const { setWeatherObj } = useContext(WeatherContext);
 
   const onSubmit = (values: IFormValues) => {
-    console.log("submit", values.inputCity);
     setCity(values.inputCity);
     {
       history.push("/weather/today");
@@ -47,12 +48,13 @@ export const FormikForm = () => {
                 onClick={() => {
                   history.push("/");
                   setCity("");
+                  setWeatherObj({});
                 }}
               >
                 Back Home Page
               </button>
               <h1 className={styles["header"]}>
-                Weather forecast in your city
+                The weather forecast in your city
               </h1>
             </div>
             <div className={styles["flex-center"]}>

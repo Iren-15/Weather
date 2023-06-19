@@ -1,5 +1,5 @@
-import { NavLink, Route, Switch } from "react-router-dom";
 import { useContext, useEffect } from "react";
+import { NavLink, Route, Switch } from "react-router-dom";
 import { FiveDays } from "../../pages/fiveDays";
 import { ThreeDays } from "../../pages/threeDays";
 import { Day } from "../../pages/today";
@@ -14,16 +14,12 @@ export const Tabs = () => {
 
   useEffect(() => {
     const getWeatherInCity = async () => {
-      try {
-        const res = await fetch(
-          `${api.endpoint}forecast?q=${city}&cnt=33&units=metric&appid=${api.key}`
-        );
-        const resReceived = await res.json();
-        setWeatherObj(resReceived);
-        console.log(resReceived);
-      } catch (e) {
-        return console.log("error");
-      }
+      const res = await fetch(
+        `${api.endpoint}forecast?q=${city}&cnt=41&units=metric&appid=${api.key}`
+      );
+      const resReceived = await res.json();
+      setWeatherObj(resReceived);
+      return resReceived;
     };
     getWeatherInCity();
   }, [city]);
