@@ -7,9 +7,10 @@ Course curator: [Taras Samoilenko](https://github.com/cos1715)
 
 Description: 
 
-"Weather" - is an application that allows you to view the current weather forecast in any city.
+"Weather" - is an application that allows you to view the weather forecast in any city.
 
-Also in this application you can view the forecast for 3 - 5 days.
+In this application you can search current weather forecast or 
+weather forecast for 3 - 5 days with data every 6 hours by city name.
 # Tech stack
 - react
 - javascript
