@@ -12,8 +12,15 @@ Description:
 In this application you can search current weather forecast or 
 weather forecast for 3 - 5 days with data every 6 hours by city name.
 # Tech stack
-- React
-- JavaScript
 - TypeScript
-- Html/css
-- Sass
+- JavaScript
+- HTML/CSS
+- SASS
+
+Libraries used:
+
+- React
+- React Router
+- Classnames
+- Formik
+- Yup
