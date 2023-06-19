@@ -23,7 +23,7 @@ export const Tabs = () => {
     };
     getWeatherInCity();
   }, [city]);
-
+ 
   return (
     <div className={styles["tabs"]}>
       {weatherObj.cod == 200 && (

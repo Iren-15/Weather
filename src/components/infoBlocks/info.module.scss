@@ -19,7 +19,7 @@
   padding-right: 35px;
   margin-bottom: 35px;
   list-style: none;
-  width: 185px;
+  width: 180px;
 }
 
 .flex-col {
@@ -81,7 +81,7 @@
   font-style: italic;
 }
 
-@media all and (max-width: 820px) {
+@media all and (max-width: 1024px) {
   .hourly-container {
     padding-left: 0px;
     padding-right: 0px;

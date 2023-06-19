@@ -12,7 +12,7 @@ export const HourlyWeatherBlock = (props: any) => {
       <p className={styles["par-feels"]}>Feels like: {props?.feels}° C</p>
       <p className={styles["par-conditions"]}>{props?.conditions}</p>
       <p className={styles["par-variation"]}>
-        Min: {props?.temp_min}°- Max: {props?.temp_max}°
+        Min:{props?.temp_min}°- Max:{props?.temp_max}°
       </p>
     </div>
   );
