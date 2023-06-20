@@ -3,7 +3,7 @@ Course curator: [Taras Samoilenko](https://github.com/cos1715)
 
  [About React course](https://a-level.com.ua/courses/front-end-online/)
 # Weather app
-[Demo](https://weather-dlga369tx-iren-15.vercel.app/) 
+[Demo](https://weather-git-weather-app-iren-15.vercel.app//) 
 
 Description: 
 
