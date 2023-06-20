@@ -32,8 +32,10 @@ export const Day = () => {
   useEffect(() => {
     const ii = indexArrCurrentDay.length;
     let indexCurDayHours;
-    if (ii == 6) {
-      indexCurDayHours = [0, 2, 4];
+    if (ii == 7) {
+      indexCurDayHours = [1, 3, 5];
+    } else if (ii == 6) {
+      indexCurDayHours = [0, 2, 4]; 
     } else if (ii == 5) {
       indexCurDayHours = [1, 3];
     } else if (ii == 4) {
