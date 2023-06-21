@@ -1,0 +1,38 @@
+.info-container {
+    padding: 40px 10px 10px 10px;
+}
+
+.home-page {
+    background-color:rgb(177, 210, 227) ;
+    min-height: 80vh;
+}
+
+.home-container {
+    height: 80vh;
+    background: url('https://cdn.glitch.global/7034fa4f-0a84-4088-9d8e-d95c9dd33f3f/kyiv.avif?v=1686659642153') 
+    no-repeat center center fixed;
+    background-size: cover;
+}
+
+.flex-col-center {
+    padding: 10px;
+    text-align: center;
+}
+
+.home-header {
+    color: rgb(73, 73, 73);
+}
+
+.link-other-city {
+    font-size: 25px;
+    color: rgb(55, 154, 55);
+    &:hover {
+        color: rgb(177, 132, 78)
+    }
+}
+
+@media all and (max-width: 820px) {
+    .home-container {
+        min-height: 87vh;
+    }
+}
